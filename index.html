@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Google Takedown Data Visualization</title>
+<head>
+  <link rel="stylesheet" href="dc.css">
+  <link rel="stylesheet" href="d3-tip.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>
+<body>
+  <a href="https://github.com/quinnlee/google-takedown-visualization"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-12' >
+        <h1><a href='javascript:dc.filterAll();dc.redrawAll();'>Google Take Down Notices</a></h1>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-6'>
+
+        <div class='row'>
+          <div id='product-bar-chart' class='active-chart' data-product-chart>
+            <h2 class=chart-title > By Product </h2>
+            <a class="reset" href="javascript:productBarChart.filterAll();dc.redrawAll();">reset</a>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div id='reason-bar-chart' class='hidden' data-reason-chart>
+            <h2 class=chart-title > By Reason </h2>
+            <a class="reset" href="javascript:reasonBarChart.filterAll();dc.redrawAll();">reset</a>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+
+        <div class='row button-controls'>
+          <div class='col-md-2 col-md-offset-4'>
+            <div id='reason-preview-chart' class='btn btn-default' data-reason-button ></div>
+          </div>
+          <div class='col-md-2 center-block'>
+            <div id='product-preview-chart' class='btn btn-default active' data-product-button ></div>
+          </div>
+        </div>
+        <div id='order-line-chart' class="order-time-chart">
+          <h2 class=chart-title> By Time </h2>
+          <a class="reset" href="javascript:orderLineChart.filterAll();dc.redrawAll();">reset</a>
+          <span class="reset" style="display: none;"> Range: <span class="filter"></span></span>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <div class='col-md-3'>
+        <div id='country-row-chart' class='row country-chart' data-major-country >
+          <h2 class=chart-title> By Country </h2>
+          <a class="reset" href="javascript:countryRowChart.filterAll();dc.redrawAll();">reset</a>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <div class='col-md-3'>
+        <h2> Introduction </h2>
+        <p>
+          This is a a data visualization of 'requests to remove content' from governments.
+          The raw data can be found in the <a href=http://www.google.com/transparencyreport/removals/government/> Google's Transparency Report </a>
+        </p>
+        <p>
+          Some questions to consider: </br>
+          What type of requests came from <a target="_self" href="javascript:null" data-filter-france>France</a>
+          or <a target="_self" href="javascript:null" data-filter-turkey>Turkey</a>?
+          Where did the <a target='_self' href="javascript:null" data-filter-national-security> National Security </a>
+          or <a target='_self' href="javascript:null" data-filter-defamation >Defamation</a> requests come from?
+        </p>
+        <p>
+          Tools used: <a href="https://github.com/mbostock/d3">d3.js</a>,
+          <a href="https://github.com/dc-js/dc.js">dc.js</a>,
+          <a href="https://github.com/square/crossfilter"> Crossfilter.js</a>,
+          <a href="https://github.com/Caged/d3-tip"> d3-tip.js</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="crossfilter.min.js"></script>
+  <script src="d3.min.js"></script>
+  <script src="dc.js"></script>
+  <script src="d3-tip.js"></script>
+  <script src="colorbrewer.js"></script>
+  <script src="viz.js"></script>
+  <script src="functionality.js"></script>
+</body>
