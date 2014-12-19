@@ -12,7 +12,7 @@ var productPreviewBarChart = dc.barChart('#product-preview-chart');
 
 var timeFormat = d3.time.format("%m/%d/%Y");
 
-d3.json('/google-government-removal-request.json', function(error, data){
+d3.json('json/google-government-removal-request.json', function(error, data){
 
   data.forEach(function(request){
     request.period_ending_date = timeFormat.parse(request.period_ending);
