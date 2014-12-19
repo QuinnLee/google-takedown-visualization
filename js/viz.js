@@ -128,7 +128,7 @@ d3.json('json/google-government-removal-request.json', function(error, data){
     .offset([-10,0]);
 
   reasonOtherTip = d3.tip().attr('class', 'd3-tip')
-    .html(function(d) { return  '<p> Executive, police, etc. Orders: ' + d.data.value.total_executive_police_etc +  '</p>' })
+    .html(function(d) { return  '<p> Executive, Police, Etc. Orders: ' + d.data.value.total_executive_police_etc +  '</p>' })
     .offset([-10,0]);
 
   reasonBarChart.width(540)
@@ -263,7 +263,7 @@ d3.json('json/google-government-removal-request.json', function(error, data){
 
 // X is Country, Y Requests made
   countryTip= d3.tip().attr('class', 'd3-tip')
-    .html(function(d) {  return '<p> Court Orders: ' + d.value.court_orders + '</p>'+ '<p> Executive, Police, etc. Orders : ' + d.value.other_orders + '</p>' })
+    .html(function(d) {  return '<p> Court Orders: ' + d.value.court_orders + '</p>'+ '<p> Executive, Police, Etc. Orders : ' + d.value.other_orders + '</p>' })
     .direction('e')
     .offset([0, 10]);
 
@@ -297,7 +297,6 @@ d3.json('json/google-government-removal-request.json', function(error, data){
     .renderTitle(false)
     .turnOffControls()
     .xAxis().ticks(5);
-
 
   dc.renderAll();
 });
