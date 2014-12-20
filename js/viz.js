@@ -275,8 +275,8 @@ d3.json('json/google-government-removal-request.json', function(error, data){
     .valueAccessor(function(p) {
       return p.value.orders_sum;
     })
-    .ordinalColors(colorbrewer.RdYlGn[11])
-    .colorAccessor(function(d,i){ return d.key; })
+    .ordinalColors(colorbrewer.Reds[5])
+    .colorAccessor(function(d,i){ return i; })
     .elasticX(true)
     .labelOffsetX(10)
     .ordering(function(d) { return d.orders_sum; })
