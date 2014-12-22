@@ -74,14 +74,14 @@ d3.json('json/google-government-removal-request.json', function(error, data){
       p.item_sum += v.items_requested_to_be_removed;
       p.total_court_orders += v.court_orders;
       p.total_executive_police_etc += v.executive_police_etc;
-      p.total_orders += (v.court_orders + v.executive_police_etc);
+      p.total_orders +=  (v.court_orders + v.executive_police_etc);
       return p;
     },
     function(p,v) {
       p.item_sum -= v.items_requested_to_be_removed;
       p.total_court_orders -= v.court_orders;
       p.total_executive_police_etc -= v.executive_police_etc;
-      p.total_orders -= (v.court_orders - v.executive_police_etc);
+      p.total_orders -=  (v.court_orders + v.executive_police_etc);
       return p;
     },
     function(p,v){
