@@ -1,0 +1,38 @@
+.btn {
+  cursor: pointer;
+}
+
+.btn .axis {
+  visibility: hidden;
+}
+
+.country-chart g.row text {
+  fill: black;
+}
+
+.country-control {
+  margin-left: 13px;
+}
+
+.button-controls {
+  padding-top: 10px;
+}
+
+.chart-title {
+  float: left;
+}
+
+.reset {
+  margin-top: 32px;
+  margin-left: 10px;
+  float: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 a:hover {
+  text-decoration: none;
+}
+
